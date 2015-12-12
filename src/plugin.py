@@ -1621,6 +1621,9 @@ class SpiffyDungeonAnnouncer(SpiffyAnnouncer):
                 if is_seance:
                     unit_name = self._c(unit_name, "red")
 
+                if unit.is_undead():
+                    unit_name = self._c(unit_name, "light blue")
+
                 unit_level = self._c(unit.level, "green")
                 unit_titles.append("%s (%s)" % (unit_name, unit_level))
 
